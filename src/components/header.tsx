@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useToggle } from 'react-use'
+import { useToggle, useWindowSize } from 'react-use'
 import Hero from './hero'
 import MenuIcon from './icons/menuIcon'
-import Menu from './menu/menu'
+import Menu from './menu'
 import Toggle from './toggle'
 import VideoHero from './videoHero'
 
@@ -15,6 +15,7 @@ const Container = styled.header`
 const Header = () => {
   const [displayMenu, setDisplayMenu] = useToggle(false)
   const [videoPlay, toggleVideoPlay] = useToggle(true)
+  const { width } = useWindowSize()
 
   return (
     <Container>
@@ -22,7 +23,7 @@ const Header = () => {
       <Hero />
       <VideoHero play={videoPlay} />
       <MenuIcon handleOnClick={setDisplayMenu} />
-      <Toggle on={videoPlay} toggle={toggleVideoPlay} />
+      {width > 768 && <Toggle on={videoPlay} toggle={toggleVideoPlay} />}
     </Container>
   )
 }

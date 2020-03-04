@@ -14,14 +14,17 @@ const slideIn = keyframes`
   }
 `
 
-const Container = styled.nav`
+interface ContainerProps {
+  displayMenu: boolean
+}
+const Container = styled.nav<ContainerProps>`
   display: flex;
   flex-direction: column;
   background: ${rgba(commonTheme.colors.light.accent, 0.7)};
   height: 100vh;
   width: 12rem;
   position: fixed;
-  box-shadow: aliceblue;
+  box-shadow: 2px 0 15px 2px rgba(0, 0, 0, 0.2);
   top: 0;
   left: 0;
   animation: ${slideIn} 1s ease-out;
@@ -38,7 +41,7 @@ interface MenuProps {
 }
 const Menu = ({ displayMenu, toggleMenu }: MenuProps) =>
   displayMenu ? (
-    <Container>
+    <Container displayMenu={displayMenu}>
       <LogoContainer>
         <LogoIcon size={50} fill={commonTheme.colors.light.menu} />
       </LogoContainer>
