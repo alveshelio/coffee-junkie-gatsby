@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { useToggle } from 'react-use'
 import Hero from './hero'
 import MenuIcon from './icons/menuIcon'
 import Menu from './menu/menu'
+import Toggle from './toggle'
 import VideoHero from './videoHero'
 
 const Container = styled.header`
@@ -11,16 +13,16 @@ const Container = styled.header`
 `
 
 const Header = () => {
-  const [displayMenu, setDisplayMenu] = useState<boolean>(false)
-  const toggleMenu = () => {
-    setDisplayMenu(x => !x)
-  }
+  const [displayMenu, setDisplayMenu] = useToggle(false)
+  const [videoPlay, toggleVideoPlay] = useToggle(true)
+
   return (
     <Container>
-      <Menu displayMenu={displayMenu} toggleMenu={toggleMenu} />
+      <Menu displayMenu={displayMenu} toggleMenu={setDisplayMenu} />
       <Hero />
-      <VideoHero />
-      <MenuIcon handleOnClick={toggleMenu} />
+      <VideoHero play={videoPlay} />
+      <MenuIcon handleOnClick={setDisplayMenu} />
+      <Toggle on={videoPlay} toggle={toggleVideoPlay} />
     </Container>
   )
 }
