@@ -19,4 +19,10 @@ export const commonTheme: CommonTheme = {
       menu: '#382923',
     },
   },
+  text: {
+    fontFamily: {
+      headers: "'La Belle Aurore', cursive",
+      body: "'Open Sans', sans-serif;",
+    },
+  },
 }

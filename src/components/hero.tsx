@@ -31,7 +31,7 @@ const Content = styled.div`
 `
 
 const Title = styled.h1`
-  font-family: 'La Belle Aurore', cursive;
+  font-family: ${commonTheme.text.fontFamily.headers};
   font-size: 4rem;
   margin: 0;
   text-align: center;

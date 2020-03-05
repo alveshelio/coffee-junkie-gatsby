@@ -20,7 +20,7 @@ interface ContainerProps {
 const Container = styled.nav<ContainerProps>`
   display: flex;
   flex-direction: column;
-  background: ${rgba(commonTheme.colors.light.accent, 0.7)};
+  background: ${rgba(commonTheme.colors.light.accent, 0.8)};
   height: 100vh;
   width: 12rem;
   position: fixed;
@@ -28,7 +28,7 @@ const Container = styled.nav<ContainerProps>`
   top: 0;
   left: 0;
   animation: ${slideIn} 1s ease-out;
-  z-index: 3;
+  z-index: 6;
 `
 
 const LogoContainer = styled.div`

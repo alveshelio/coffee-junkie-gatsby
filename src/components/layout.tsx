@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: ${commonTheme.text.fontFamily.body};
     color: ${commonTheme.colors.light.body};
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(${bodyBG});
     }

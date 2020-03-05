@@ -8,6 +8,7 @@ const Container = styled.div`
   position: fixed;
   top: 50px;
   right: 50px;
+  z-index: 9;
 `
 const pulse = keyframes`
   0% {

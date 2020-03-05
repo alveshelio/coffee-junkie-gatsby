@@ -40,7 +40,6 @@ const VideoHero = ({ play }: VideoHeroProps) => {
         <source src={videoWEBM} type="video/webm" />
         Your browser does not support video
       </Video>
-      /
     </Container>
   )
 }
