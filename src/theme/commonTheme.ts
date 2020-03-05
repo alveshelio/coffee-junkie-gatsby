@@ -8,6 +8,7 @@ export const commonTheme: CommonTheme = {
       accent: '#E3B505',
       body: '#191919',
       header: '',
+      menu: '#382923',
     },
     dark: {
       primary: '',
@@ -15,6 +16,7 @@ export const commonTheme: CommonTheme = {
       accent: '#E3B505',
       body: '#191919',
       header: '',
+      menu: '#382923',
     },
   },
 }

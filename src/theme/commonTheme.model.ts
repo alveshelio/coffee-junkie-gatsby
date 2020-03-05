@@ -4,6 +4,7 @@ interface Colors {
   accent: string
   body: string
   header: string
+  menu: string
 }
 interface ColorsThemes {
   light: Colors

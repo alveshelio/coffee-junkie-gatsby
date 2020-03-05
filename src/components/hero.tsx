@@ -48,6 +48,12 @@ const IconsContainer = styled.div`
   grid-template-columns: repeat(3, 3.5rem);
   grid-column-gap: 0.5rem;
 `
+const Icon = styled(FontAwesomeIcon)`
+  transition: color 0.5s linear;
+  &:hover {
+    color: ${commonTheme.colors.light.menu};
+  }
+`
 
 const SocialLink = styled.a`
   display: flex;
@@ -61,13 +67,10 @@ const SocialLink = styled.a`
   transition: all 0.5s linear;
 
   &:hover {
+    ${Icon} {
+      color: ${commonTheme.colors.light.menu};
+    }
     background: ${commonTheme.colors.light.accent};
-  }
-`
-
-const Icon = styled(FontAwesomeIcon)`
-  &:hover {
-    color: ${commonTheme.colors.light.secondary};
   }
 `
 
