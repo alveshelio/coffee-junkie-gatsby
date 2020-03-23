@@ -4,9 +4,11 @@ import { commonTheme } from '../theme/commonTheme'
 
 const Container = styled.div`
   position: absolute;
-  bottom: 50px;
-  right: 112px;
-  z-index: 3;
+  bottom: 110px;
+  right: 110px;
+  z-index: 10;
+  width: 0;
+  height: 0;
 `
 const Label = styled.label`
   position: absolute;
@@ -46,6 +48,7 @@ const Input = styled.input`
       height: 23px;
       margin-left: 33px;
       transition: 0.2s;
+      z-index: 6;
     }
   }
 `

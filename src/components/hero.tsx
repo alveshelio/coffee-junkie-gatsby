@@ -11,7 +11,7 @@ import {
 import headerBG from '../assets/images/coffee.jpg'
 import { commonTheme } from '../theme/commonTheme'
 
-const Container = styled.header`
+const Container = styled.div`
   display: grid;
   justify-content: center;
   align-content: center;

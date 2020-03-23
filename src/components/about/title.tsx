@@ -4,19 +4,23 @@ import { commonTheme } from '../../theme/commonTheme'
 
 import H1 from './h1'
 
+const StyledTitle = styled(H1)`
+  font-size: 2rem;
+`
+
 const Line = styled.div`
-  width: 100px;
-  border-bottom: 2px solid ${commonTheme.colors.light.accent};
+  width: 5rem;
+  border-bottom: 0.25rem solid ${commonTheme.colors.light.accent};
 `
 
 interface TitleProps {
   children: React.ReactNode
 }
 const Title = ({ children }: TitleProps) => (
-  <>
-    <H1>{children}</H1>
+  <StyledTitle>
+    {children}
     <Line />
-  </>
+  </StyledTitle>
 )
 
 export default Title
